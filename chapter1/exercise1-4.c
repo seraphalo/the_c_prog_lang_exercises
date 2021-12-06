@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+/* print Celsisu-Fahrenheit table 
+   for celsius = -20, -10, 0, ..., 150; floating-point version */
+
 int main(){
     float fahr, celsius;
     int lower, upper, step;
