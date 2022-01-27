@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-/* Write a program to count blanks, tabs, and newlines. 
-	Note: press ctrl + D to trigger an EOF. */
+/* Write a program to copy its input to its output, replacing each tab
+	by \t, each backspace by \b, and each backslash by \\. */
 
 int main()
 {
 	int c, nb;
 	while((c = getchar()) != EOF)
-		if(c == ' ')
+		if(c == 8)
 			printf("%s", "\\b");
 		else if(c == '\t')
 			printf("%s", "\\t");
-		else if(c == '\n')
-			printf("%s", "\\n");
+		else if(c == '\\')
+			printf("%s", "\\\\");
 		else
 			printf("%c", c);
 	
