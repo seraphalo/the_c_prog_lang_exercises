@@ -29,4 +29,5 @@ main(){
 			++nw;
 		}
 	}
+	printf("%d %d %d\n", nl, nw, nc);
 }
