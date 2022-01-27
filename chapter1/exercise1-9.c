@@ -2,9 +2,7 @@
 
 /* Write a program to copy its input to its output, replacint each string of
 	one or more blanks by a single blank. 
-	Not sure I have understand this correctly...
-	Also if-statement is introduced after this exercise, so this may not be the
-	best solution. 
+	Not sure I have understand the question correctly...
 	Anyway, here I'm replacing any consecutive blanks with a single blank. */
 
 int main(){
