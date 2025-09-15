@@ -50,3 +50,74 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Compiled binaries
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+
+# Object files
+*.o
+*.obj
+*.lo
+*.slo
+*.ko
+
+# Build directories
+build/
+bin/
+obj/
+debug/
+release/
+Debug/
+Release/
+x64/
+x86/
+
+# IDE/Editor files
+.vscode/
+.vs/
+*.vcxproj.user
+*.suo
+*.sdf
+*.opensdf
+*.user
+.idea/
+*.cbp
+*.layout
+*.depend
+
+# Temporary files
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Core dumps
+core
+*.core
+
+# Generated documentation
+docs/html/
+docs/latex/
+
+# Package files
+*.tar.gz
+*.zip
+*.rar
+*.7z
