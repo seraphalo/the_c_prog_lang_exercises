@@ -1,9 +1,11 @@
-#include <stdio.h>
+/**
+ * Write a program to copy its input to its output, replacing each string 
+ * of one or more blanks by a single blank. 
+ * Not sure I have understand the question correctly...
+ * Anyway, here I'm replacing any consecutive blanks with a single blank.
+ */
 
-/* Write a program to copy its input to its output, replacint each string of
-	one or more blanks by a single blank. 
-	Not sure I have understand the question correctly...
-	Anyway, here I'm replacing any consecutive blanks with a single blank. */
+#include <stdio.h>
 
 int main(){
 	char c;

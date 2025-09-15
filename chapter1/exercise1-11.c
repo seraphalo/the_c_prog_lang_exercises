@@ -1,16 +1,18 @@
+/**
+ * Count lines, words, and characters in input.
+ * Exercise 1-11. How would you test the word count program? 
+ * What kind of input are most likely to uncover bugs if there are any? 
+ * 
+ * Answer: Cases that we call edge cases are those that most likely to
+ * uncover bugs. For example, in this case, we can have empty string,
+ * string contains only blankspace/tab/newline, string starts or ends
+ * with them, string contains only one word, and etc.
+ */
+
 #include <stdio.h>
 
 #define IN 1
 #define OUT 0
-
-/* count lines, words, and characters in input 
-	Exercise 1-11. How would you test the word count program? What
-	kind of input are most likely to uncover bugs if there are any? 
-
-	Answer: Cases that we call edge cases are those that most likely to
-	uncover bugs. For example, in this case, we can have empty string,
-	string contains only blankspace/tab/newline, string starts or ends
-	with them, string contains only one word, and etc. */
 
 main(){
 	int c, nl, nw, nc, state;

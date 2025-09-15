@@ -1,6 +1,8 @@
-#include <stdio.h>
+/**
+ * Print Fahrenheit-Celsius table; reversed version
+ */
 
-/* print Fahrenheit-Celsius table; reversed version */
+#include <stdio.h>
 
 int main()
 {

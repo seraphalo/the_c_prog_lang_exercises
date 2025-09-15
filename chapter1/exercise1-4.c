@@ -1,7 +1,9 @@
-#include <stdio.h>
+/**
+ * Print Celsisu-Fahrenheit table for 
+ * celsius = -20, -10, 0, ..., 150; floating-point version
+ */
 
-/* print Celsisu-Fahrenheit table 
-   for celsius = -20, -10, 0, ..., 150; floating-point version */
+#include <stdio.h>
 
 int main(){
     float fahr, celsius;

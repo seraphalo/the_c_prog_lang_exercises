@@ -1,6 +1,8 @@
-#include <stdio.h>
+/**
+ * Write a program to print a histogram of the lengths of words in its input.
+ */
 
-/* Write a program to print a histogram of the lengths of words in its input. */
+#include <stdio.h>
 
 #define MAX_N_WORDS 256
 #define IN 1
