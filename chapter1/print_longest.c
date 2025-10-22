@@ -1,9 +1,3 @@
-/**
- * Revise the main routine of the longest-line program so
- * it will correctly print the length of arbitrarily long lines,
- * and as much as possible of the text.
- */
-
 #include <stdio.h>
 
 #define MAXLINE 1000		/* maximum input line size */
@@ -19,32 +13,13 @@ int main(int argc, char const *argv[])
 	int max;			/* maximum length seen so far */
 	char line[MAXLINE];		/* current input line */
 	char longest[MAXLINE];	/* longest line saved here */
-	int TBC = 0;
-	int total_len = 0;
-	char line_header[MAXLINE];
 
 	max = 0;
-	while ((len = my_getline(line, MAXLINE)) > 0) {
-		if (len == MAXLINE - 1 && line[MAXLINE - 2] != '\n') {
-			if (TBC == 0) {
-				copy(line_header, line);
-			}
-			total_len += len;
-			TBC = 1;
-		}
-		else if (TBC == 1) {
-			TBC = 0;
-			total_len += len;
-			if (total_len > max) {
-				max = total_len;
-				copy(longest, line_header);
-			}
-			total_len = 0;
-		}else if (len > max) {
+	while ((len = my_getline(line, MAXLINE)) > 0 )
+		if (len > max) {
 			max = len;
 			copy(longest, line);
 		}
-	}
 	if (max > 0)	/* there was a line */
 		printf("%s\n", longest);
 	return 0;
