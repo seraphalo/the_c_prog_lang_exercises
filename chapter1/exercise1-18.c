@@ -1,12 +1,12 @@
-/*
- * Write a program to print all input lines that are longer than 80 characters.
+/**
+ * Write a program to remove trailling blanks and tabs from each line of input,
+ * and to delete entirely blank lines.
  */
 
 #include <stdio.h>
 
 #define MAXLINE 1000		/* maximum input line size */
 #define MAXOUTPUT 1024*1024
-#define THRESHOLD 80
 
 /* getline function already exists in the stdio.h*/
 int my_getline(char line[], int maxline);
@@ -21,11 +21,29 @@ int main(int argc, char const *argv[])
 	char output[MAXOUTPUT];
 	int output_len = 0;
 
-	while ((len = my_getline(line, MAXLINE)) > 0 )
-		if (len > THRESHOLD && output_len + len < MAXOUTPUT) {
+	while ((len = my_getline(line, MAXLINE)) > 0 ) {
+		// ignore blank lines
+		if (line[0] == '\n')
+			continue;
+		// remember if the line ends with a newline char
+		char last = line[len - 1] == '\n' ? '\n' : '\0';
+		int i = len - 1;
+		// filling with null chars
+		while (line[i] == ' ' || line[i] == '\t' || line[i] == '\n') {
+			line[i] = '\0';
+			i--;
+		}
+		len = i + 1;
+		// add the newline char back if necessary
+		if (last == '\n') {
+			line[len] = last;
+			len++;
+		}
+		if (output_len + len < MAXOUTPUT) {
 			copy_len(output, output_len, line, 0, len);
 			output_len += len;
 		}
+	}
 	output[output_len] = '\0';
 	printf("%s\n", output);
 	return 0;
